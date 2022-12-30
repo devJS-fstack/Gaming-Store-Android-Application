@@ -1,3 +1,3 @@
 ## Some images from application
 
-(./images/img_1.jpg)
+(./images_md/img_1.jpg)
