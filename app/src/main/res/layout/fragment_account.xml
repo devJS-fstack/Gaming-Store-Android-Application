@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic__back"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/heading_text"
+                android:text="Account Settings"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/line"
+            />
+        <LinearLayout
+            android:id="@+id/linearProfile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:layout_width="79dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/img_user_20x20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                style="@style/heading_text"
+                android:textSize="15dp"
+                android:text="Profile" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearPurchaseOrder"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/img_order_18x18"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Purchase Orders"
+                style="@style/heading_text"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearAddress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            >
+            <ImageView
+                android:duplicateParentState="true"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/img_address"
+                />
+
+            <TextView
+                android:duplicateParentState="true"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="My Addresses"
+                style="@style/heading_text"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+
+        </LinearLayout>
+</androidx.core.widget.NestedScrollView>

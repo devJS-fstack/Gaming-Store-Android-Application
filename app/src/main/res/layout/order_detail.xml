@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic__back"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                />
+
+            <TextView
+                android:id="@+id/tvHeadingAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/heading_text"
+                android:text="Order Details"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/line"
+            app:layout_constraintBottom_toBottomOf="@+id/heading"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="15dp"
+            android:text="Products ordered"
+            style="@style/text_normal"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProductDetail"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:nestedScrollingEnabled="false"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-45dp"
+            app:layout_constraintBottom_toBottomOf="@+id/rvProductDetail"
+            android:layout_marginLeft="15dp"
+            android:text="Delivery Address"
+            style="@style/text_normal"
+            />
+
+        <LinearLayout
+            android:layout_width="370dp"
+            android:layout_height="180dp"
+            android:layout_marginBottom="-235dp"
+            app:layout_constraintBottom_toBottomOf="@+id/rvProductDetail"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="@drawable/border_card"
+            android:padding="10dp"
+            android:gravity="center"
+            >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/tvFullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/heading_text"
+                        android:text="Nguyễn Văn Tình"
+                        />
+                    <TextView
+                        android:id="@+id/tvPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text_normal"
+                        android:text="0879229094"
+                        />
+                    <TextView
+                        android:id="@+id/tvStreet"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        style="@style/text_normal"
+                        android:text="14/1C đường 359"
+                        />
+                    <TextView
+                        android:id="@+id/tvCity"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        style="@style/text_normal"
+                        android:text="Phường Phước Long B, Thành Phố Thủ Đức, Thành phố Hồ Chí Minh"
+                        />
+                </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-275dp"
+            app:layout_constraintBottom_toBottomOf="@+id/rvProductDetail"
+            android:layout_marginLeft="15dp"
+            android:text="Payment Details"
+            style="@style/text_normal"
+            />
+
+        <LinearLayout
+            android:layout_width="370dp"
+            android:layout_height="140dp"
+            android:layout_marginBottom="-425dp"
+            app:layout_constraintBottom_toBottomOf="@+id/rvProductDetail"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="@drawable/border_card"
+            android:padding="10dp"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                >
+
+                <TextView
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    style="@style/old_price"
+                    android:text="Merchandise Subtotal"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/merchandiseTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/text_normal"
+                    android:text="$0"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                >
+
+                <TextView
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    style="@style/old_price"
+                    android:text="Shipping Subtotal"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/shippingTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/text_normal"
+                    android:text="$0"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:background="@drawable/line_cart"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                >
+
+                <TextView
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    style="@style/heading_text"
+                    android:textSize="15sp"
+                    android:text="Total Payment"
+                    />
+
+                <TextView
+                    android:id="@+id/totalPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/text_normal"
+                    android:text="$0"
+                    android:textSize="15sp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnPlaceHolder"
+            android:layout_width="370dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="-505dp"
+            app:layout_constraintBottom_toBottomOf="@+id/rvProductDetail"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Place Order"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textAlignment="center"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="-545dp"
+            app:layout_constraintBottom_toBottomOf="@+id/rvProductDetail"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

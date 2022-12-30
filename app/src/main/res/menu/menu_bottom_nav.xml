@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_home" android:title="Home" android:icon="@drawable/icon_home" android:textSize="22dp"/>
+    <item android:id="@+id/action_voucher" android:title="Voucher" android:icon="@drawable/icon_voucher"/>
+    <item android:id="@+id/action_cart" android:title="Cart" android:icon="@drawable/icon_cart" android:actionLayout="@layout/navigations"/>
+    <item android:id="@+id/action_account" android:title="Account" android:icon="@drawable/icon_account"/>
+    <item android:id="@+id/action_sign_out" android:title="Sign Out" android:icon="@drawable/ic_logout"/>
+</menu>

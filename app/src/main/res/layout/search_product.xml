@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductByCategory">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                >
+
+                <ImageButton
+                    android:id="@+id/backProductByCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic__back"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    />
+
+                <LinearLayout
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border">
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/svProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:iconifiedByDefault="false"
+                        app:queryBackground="@android:color/transparent"
+                        app:defaultQueryHint="Search product"
+                        android:paddingLeft="-10dp"
+                        app:searchIcon="@drawable/icon_search"
+                        android:textAppearance="@style/AppSearchView"/>
+                </LinearLayout>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="18dp"
+                    android:src="@drawable/filter"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/line"
+                android:layout_marginTop="30dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sort"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filter by"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="#223263"
+                    android:letterSpacing="0.03"
+                    android:layout_marginLeft="4dp"
+                    />
+            </LinearLayout>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                >
+                <RadioButton
+                    android:id="@+id/radioBest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Most prominent"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/poppins"
+                    android:buttonTint="#0A7AFF"
+                    android:checked="true"
+                    />
+                <RadioButton
+                    android:id="@+id/radioHighToLow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price high -> low"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/poppins"
+                    android:buttonTint="#0A7AFF"
+                    />
+                <RadioButton
+                    android:id="@+id/radioLowToHigh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price low -> high"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginTop="-50dp"
+                    android:layout_marginLeft="170dp"
+                    android:buttonTint="#0A7AFF"
+                    />
+            </RadioGroup>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="355dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:id="@+id/rvListProduct"
+                android:nestedScrollingEnabled="false"
+                android:layoutAnimation="@anim/layout_anim"
+                />
+
+            <ProgressBar
+                android:id="@+id/pbProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
